@@ -5,5 +5,6 @@ import (
 )
 
 func main() {
+	//this is a comment
 	fmt.Println("Hello world")
 }
