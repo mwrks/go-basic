@@ -1,1 +1,1 @@
-# go-basic
+# go-basic personal learning repository
