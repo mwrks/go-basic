@@ -10,5 +10,6 @@ func main() {
 	this is also a comment
 	that can be written in the new line
 	*/
-	fmt.Println("Hello world")
+	fmt.Print("Hello\n")
+	fmt.Println("World!")
 }
