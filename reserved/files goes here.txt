@@ -16,9 +16,6 @@ dsfg
 sg
 s
 
-g
-
-s
 
 gg
 s
