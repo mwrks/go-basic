@@ -18,4 +18,13 @@ func main() {
 	name := new(string)
 	fmt.Println(name)
 	fmt.Println(*name)
+
+	var integer int = 56
+	fmt.Println(integer)
+
+	var float float32 = 17.56423
+	fmt.Printf("The number is: %.3f\n", float)
+
+	var truth bool = true
+	fmt.Printf("Q:\tAm I a programmer?\nA:\t%t", truth)
 }
