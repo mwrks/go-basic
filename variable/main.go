@@ -32,5 +32,22 @@ func main() {
 Hope I can keep my work
 Hope I can succeed`
 	fmt.Println(message)
-	
+
+	const myName string = "Miftahudin Faiz"
+
+	const (
+		height    int     = 169
+		weight    float32 = 50.3
+		isMarried bool    = false
+	)
+	fmt.Printf("My name is\t: %s\nMy height is\t: %vcm\nMy weight is\t: %.2fkg\nMarried\t\t: %t\n", myName, height, weight, isMarried)
+
+	const (
+		today string = "senin"
+		sekarang
+		isToday = true
+	)
+	fmt.Println(today)
+	fmt.Println(sekarang)
+	fmt.Println(isToday)
 }
