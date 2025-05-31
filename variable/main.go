@@ -26,5 +26,11 @@ func main() {
 	fmt.Printf("The number is: %.3f\n", float)
 
 	var truth bool = true
-	fmt.Printf("Q:\tAm I a programmer?\nA:\t%t", truth)
+	fmt.Printf("Q:\tAm I a programmer?\nA:\t%t\n", truth)
+
+	message := `Today
+Hope I can keep my work
+Hope I can succeed`
+	fmt.Println(message)
+	
 }
