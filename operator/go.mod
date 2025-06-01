@@ -1,3 +1,3 @@
-module github.com/mwerks/go-basic/operator
+module github.com/mwrks/go-basic/operator
 
 go 1.23.3
