@@ -1,0 +1,3 @@
+module github.com/mwrks/go-basic/map
+
+go 1.25.4
