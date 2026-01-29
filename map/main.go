@@ -12,6 +12,7 @@ func main() {
 
 	// var data map[string]int
 	// data["one"] = 1	//will throw an error since the default value is nil
+	// fmt.Println(data["one"])
 
 	data := map[string]int{}
 	data["one"] = 1
@@ -29,9 +30,12 @@ func main() {
 	chicken3 := map[string]int{}
 	chicken4 := make(map[string]int)
 	chicken5 := *new(map[string]int)
-	fmt.Println(chicken3["Los"])
-	fmt.Println(chicken4["Polos"])
-	fmt.Println(chicken5["Hermanos"])
+	chicken3["Los"]= 21
+	chicken4["Pollos"]= 23
+	// chicken5["Hermanos"]= 23	// Will throw an error since it's a nil map, you cannot write into it
+	fmt.Println("Literal map", chicken3["Los"])
+	fmt.Println("Allocated map", chicken4["Pollos"])
+	fmt.Println("This is a bad practice, never use", chicken5["Hermanos"]) // Output is 0 since it's the default zero value of int
 
 	chicken6 := map[string]int{
 		"January":  50,
