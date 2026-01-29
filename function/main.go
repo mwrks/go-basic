@@ -8,19 +8,13 @@ import (
 	"time"
 )
 
+type tryType func(int) bool
+
 var randomizer = rand.New(rand.NewSource(time.Now().Unix()))
 
 func main() {
 	names := []string{"John", "Wick"}
 	printMessage("Hello", names)
-
-}
-
-func printMessage(message string, arr []string) {
-	// nameString := strings.Join(arr, " ")
-	// fmt.Printf("Message : \"%s %s\"", message, nameString)
-	var nameString = strings.Join(arr, " ")
-	fmt.Println(message, nameString)
 
 	var randomValue int
 	randomValue = randomWithRange(2, 10)
@@ -108,6 +102,14 @@ func printMessage(message string, arr []string) {
 		return strings.Contains(word, "u")
 	})
 	fmt.Println(containO)
+
+}
+
+func printMessage(message string, arr []string) {
+	// nameString := strings.Join(arr, " ")
+	// fmt.Printf("Message : \"%s %s\"", message, nameString)
+	var nameString = strings.Join(arr, " ")
+	fmt.Println(message, nameString)
 }
 
 func randomWithRange(min, max int) int {
@@ -172,7 +174,7 @@ func filter(data []string, callback func(string) bool) []string {
 	return result
 }
 
-func iTry(data []int, callback func(int) bool) []int {
+func iTry(data []int, callback tryType) []int {
 	var result []int
 	for _, each := range data {
 		if funct := callback(each); funct {
@@ -180,7 +182,7 @@ func iTry(data []int, callback func(int) bool) []int {
 		}
 	}
 	return result
-}
+} // Using alias in Closure types
 
 func anotherTry(data []string, callback func(string) bool) []string {
 	var res []string
