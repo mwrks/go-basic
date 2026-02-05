@@ -63,6 +63,7 @@ func main() {
 	fmt.Println(s6.person.name)
 	fmt.Println(s6.person.age)
 	fmt.Println(s6.age)
+	fmt.Println(s6.grade)
 
 	// type sp7 = struct { // this is a type alias, it works but don't use this without proper usage
 	type sp7 struct { // this is type definition, use this. This is local though, so use it properly
@@ -150,8 +151,8 @@ func main() {
 	// p2 := struct { name string; age int } { "ethan", 23 }
 
 	type person2 struct { // use backtick to add property tags
-		name string `tag1`
-		age  int    `tag2`
+		Name string `json:"name"`	// the tags should have a key and a value, use - to ignore the value
+		Age  int    `json:"age"`	// the fields should've global scope so it can be exported
 	}
 	fmt.Println(person2{})
 
