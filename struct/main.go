@@ -152,7 +152,7 @@ func main() {
 
 	type person2 struct { // use backtick to add property tags
 		Name string `json:"name"`	// the tags should have a key and a value, use - to ignore the value
-		Age  int    `json:"age"`	// the fields should've global scope so it can be exported
+		Age  int    `json:"age"`	// the fields should've global scope/exported so it can be exported
 	}
 	fmt.Println(person2{})
 
